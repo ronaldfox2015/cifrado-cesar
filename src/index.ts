@@ -5,7 +5,7 @@ let encode = (clave,texto)=>{
 		if(encuentraAscii(texto.charCodeAt(i))){
 			output += nextAscii(texto.charCodeAt(i),clave);
 		}else{
-			output +=  String.fromCharCode(num + clave);
+			output +=  String.fromCharCode(texto.charCodeAt(i) + clave);
 		}
 	}
 	return output;  
@@ -16,11 +16,10 @@ let decode = (clave,texto)=>{
 	clave = parseInt(clave);
 	
 	for (var i=0; i<texto.length;i++){
-		if(encuentraAscii(texto.charCodeAt(i))){
-		   
+		if(encuentraAscii(texto.charCodeAt(i))){		   
 			output += backAscii(texto.charCodeAt(i),clave);
 		}else{
-			output +=  String.fromCharCode(num - clave);
+			output +=  String.fromCharCode(texto.charCodeAt(i) - clave);
 		}
 	}
 	return output;  
