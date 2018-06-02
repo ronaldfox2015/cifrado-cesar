@@ -1,0 +1,38 @@
+{
+  "name": "cipher",
+  "version": "1.0.0",
+  "main": "src/index.html",
+  "license": "MIT",
+  "scripts": {
+    "htmlhint": "htmlhint src/*.html test/*.html",
+    "eslint": "eslint --ext cipher.js src/ test/",
+    "pretest": "npm run eslint && npm run htmlhint",
+    "test-browser": "opener ./test/index.html",
+    "test-node": "nyc mocha ./test/headless.js",
+    "test": "npm run test-node && npm run test-browser"
+  },
+  "dependencies": {
+    "chai": "^4.1.2",
+    "htmlhint": "^0.9.13",
+    "mocha": "^5.2.0",
+    "nyc": "^11.7.1",
+    "opener": "^1.4.3",
+    "request": "^2.87.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1"
+  },
+  "description": "Está próxima la fecha del cumpleaños de tu flacx (novix) y estás organizando una\r fiesta sorpresa. Para organizar la fiesta has creado un grupo de Whatsapp junto\r con amigos y familiares.",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaliaES/lim-2018-05-bc-core-am-cipher.git"
+  },
+  "author": "ronald",
+  "bugs": {
+    "url": "https://github.com/DaliaES/lim-2018-05-bc-core-am-cipher/issues"
+  },
+  "homepage": "https://github.com/DaliaES/lim-2018-05-bc-core-am-cipher#readme"
+}

@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-        <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+   <head>
+      <meta charset="utf-8">
+      <title>Caesar Cipher</title>
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
       <h1>Traductor de Cifrado Cesar</h1>
-    <div id="root" class="container"> 
-     <!--el div contiene la caja de texto donde se ingresara el mensaje -->
-     <div class="box">
-      <div class="space">
-      <label for="plainmsg">Introduzca el texto original</label>
+      <div id="root" class="container">
+         <!--el div contiene la caja de texto donde se ingresara el mensaje -->
+         <div class="box">
+            <div class="space">
+               <label for="plainmsg">Introduzca el texto original</label>
+            </div>
+            <div  >
+               <textarea name="plainmsg" id="plainmsg" class="box-size"></textarea>
+            </div>
+            <div>
+               <button type= "button" id="btnCipher">Cifrar</button>
+            </div>
+         </div>
+         <!--colocar un caja de  texto para ingresar el nro de desplazamientos para el cifrado-->
+         <div id= "keybox" class="box">
+            <p class="space">Desplazamiento </p>
+            <div  >
+               <input type="number" id="key" placeholder="Nro clave" min="1">
+            </div>
+            <div>
+               <button type="reset" id="reset">Borrar</button>
+            </div>
+         </div>
+         <!--el div contiene la caja de texto donde se devolvera el texto
+            cifrado -->
+         <div class="box">
+            <div class="space">
+               <label for="cipmsg">Introduzca el texto cifrado</label>
+            </div>
+            <div >
+               <textarea name="cipmsg" id="cipmsg" class="box-size"></textarea>
+            </div>
+            <div>
+               <button type="button" id="btnDeCipher">Descifrar</button>
+            </div>
+         </div>
       </div>
-      <div  >
-      <textarea name="plainmsg"id="plainmsg" class="box-size" ></textarea>
-      </div>
-      <div>
-      <button type= "button" id="btnCipher">Cifrar</button>
-      </div>
-    </div>
-  <!--colocar un caja de  texto para ingresar el nro de desplazamientos para el cifrado-->
-    <div id= "keybox" class="box">
-    <p class="space">Desplazamiento </p>
-    <div  >
-        <input type="number" id="key" placeholder="Nro clave" min="1">
-    </div>
-    <div>
-      <button type="reset"id="reset">Borrar</button>
-    </div>
-    </div>
-    <!--el div contiene la caja de texto donde se devolvera el texto
-   cifrado -->
-    <div class="box">
-      <div class="space">
-          <label for="cipmsg">Introduzca el texto cifrado</label>
-      </div>
-      <div >
-          <textarea name="cipmsg"id="cipmsg" class="box-size"></textarea>
-      </div>
-    <div>
-      <button type="button" id="btnDeCipher">Descifrar</button>
-    </div>
-    </div>
-    </div>
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
-  </body>
+      <script src="cipher.js"></script>
+      <script src="index.js"></script>
+   </body>
 </html>
