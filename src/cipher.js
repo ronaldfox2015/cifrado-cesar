@@ -69,7 +69,11 @@ window.cipher = {
         return msgdescipher
 
     },
-    createCipherWithOffset: () => {
-        return cipher
+    createCipherWithOffset: (offset) => {
+        let user
+        return user = {
+          encode :  cipher.encode(offset,'A'),
+          encode :  cipher.decode(offset,'A'),
+        }
     }
 }
