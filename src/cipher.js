@@ -73,7 +73,7 @@ window.cipher = {
         let user
         return user = {
           encode :  cipher.encode(offset,'A'),
-          encode :  cipher.decode(offset,'A'),
+          decode :  cipher.decode(offset,'A'),
         }
     }
 }
